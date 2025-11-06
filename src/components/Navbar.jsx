@@ -5,15 +5,13 @@ import gsap from "gsap";
 
 const Navbar = () => {
   useGSAP(() => {
-    const navTween = gsap.timeline(
-      {
-        ScrollTrigger: {
-          trigger: "nav",
-          start: "bottom top",
-        },
+    const navTween = gsap.timeline({
+      scrollTrigger: {
+        trigger: "nav",
+        start: "bottom top",
       },
-      []
-    );
+    });
+
     navTween.fromTo(
       "nav",
       { backgroundColor: "transparent" },
